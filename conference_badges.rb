@@ -13,10 +13,17 @@ end
 
 def assign_rooms(array)
   rooms = []
-  array.each_with_index do |name|
-    rooms.push("Hello, #{name}! You'll be assigned to room ")
+  array.each_with_index do |name, i|
+    rooms.push("Hello, #{name}! You'll be assigned to room #{i + 1}")
+  end
+  return rooms
 end
 
 def printer(badges, rooms)
-  
+  badges.each do |badge|
+    puts badge
+  end
+  rooms.each do |room|
+    puts room
+  end
 end
